@@ -1,0 +1,22 @@
+start time is: 2022-10-07 22:56:00
+the lenth of df_raw_info is 734
+the lenth of df_source_Qtot_csv is 2265113
+cnt now is 2
+cnt now is 3
+cnt now is 4
+cnt now is 5
+cnt now is 6
+cnt now is 7
+cnt now is 8
+cnt now is 9
+cnt now is 10
+
+
+the length of the result dict is:10
+the result dict is:
+{'1': 12, '2': 38, '3': 138, '4': 320, '5': 369, '6': 482, '7': 613, '8': 639, '9': 704, '10': 729}
+the result list is:
+[12, 38, 138, 320, 369, 482, 613, 639, 704, 729]
+
+
+end time is: 2022-10-07 22:57:25
