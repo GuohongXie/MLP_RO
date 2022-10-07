@@ -1,0 +1,3 @@
+start time is: 2022-10-07 23:29:19
+the lenth of df_raw_info is 734
+the lenth of df_source_Qtot_csv is 148374853

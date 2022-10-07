@@ -1,0 +1,37 @@
+start time is: 2022-10-07 23:30:29
+the lenth of df_raw_info is 734
+the lenth of df_source_Qtot_csv is 16860447
+cnt now is 2
+cnt now is 3
+cnt now is 4
+cnt now is 5
+cnt now is 6
+cnt now is 7
+cnt now is 8
+cnt now is 9
+cnt now is 10
+cnt now is 11
+cnt now is 12
+cnt now is 13
+cnt now is 14
+cnt now is 15
+cnt now is 16
+cnt now is 17
+cnt now is 18
+cnt now is 19
+cnt now is 20
+cnt now is 21
+cnt now is 22
+cnt now is 23
+cnt now is 24
+cnt now is 25
+cnt now is 26
+cnt now is 27
+cnt now is 28
+cnt now is 29
+cnt now is 30
+cnt now is 31
+cnt now is 32
+cnt now is 33
+cnt now is 34
+cnt now is 35

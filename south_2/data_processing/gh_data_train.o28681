@@ -1,0 +1,27 @@
+/public/home/hengyi/guohong/MLP_RO_2022_10_08/code/data_preprocessing
+start time is: 2022-10-07 23:29:19
+the lenth of df_raw_info is 734
+the lenth of df_source_Qtot_csv is 148374853
+Traceback (most recent call last):
+  File "/public/software/anaconda3/envs/py36/lib/python3.6/site-packages/pandas/core/indexes/base.py", line 2657, in get_loc
+    return self._engine.get_loc(key)
+  File "pandas/_libs/index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 132, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1601, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1608, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'D1A'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./find_csv_ordinal_according_to_parameters_for_merged_csv_file_Qtot_train_data_csv.py", line 56, in <module>
+    if(abs((df_raw_info['D1A'][j] - df_source_Qtot_csv['D1A'][0])) < 1e-8):
+  File "/public/software/anaconda3/envs/py36/lib/python3.6/site-packages/pandas/core/frame.py", line 2927, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/public/software/anaconda3/envs/py36/lib/python3.6/site-packages/pandas/core/indexes/base.py", line 2659, in get_loc
+    return self._engine.get_loc(self._maybe_cast_indexer(key))
+  File "pandas/_libs/index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 132, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1601, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1608, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'D1A'
