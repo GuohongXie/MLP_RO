@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -N gh_data_valid
+#PBS -l nodes=1:ppn=32:gpus=1
+#PBS -l walltime=02:00:00
+#PBS -j oe
+#PBS -q lab_gpu
+
+# set envirenment
+source /public/software/profile.d/cuda10.0.sh
+source /public/software/profile.d/python3.sh
+conda activate py36
+
+# working 
+cd /public/home/hengyi/guohong/MLP_RO_2022_10_08/code/data_preprocessing/
+python3 ./find_csv_ordinal_according_to_parameters_for_merged_csv_file_Qtot_valid_data_csv.py
