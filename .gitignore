@@ -1,0 +1,26 @@
+.ipynb_checkpoints
+/data_preprocessing/.ipynb_checkpoints
+__pycache__
+*.pyc
+# 以#开头的行都是注释
+
+# 忽略*.o和*.a文件（常见的编译过程中产生的文件）
+#*.[oa]
+
+# 忽略*.c和*.C文件，somefile.b除外，!用于在在某规则之后增加例外
+#*.[bB]
+#!somefile.b
+
+# 忽略somepath文件和somepath目录
+#dbg
+
+# 只忽略somepath目录，不忽略somepath文件
+#somepath/
+
+# 只忽略somepath文件，不忽略somepath目录
+#somepath
+#!somepath/
+
+# 只忽略当前目录下的somepath文件和目录，子目录的somepath不在忽略范围内
+#/somepath
+

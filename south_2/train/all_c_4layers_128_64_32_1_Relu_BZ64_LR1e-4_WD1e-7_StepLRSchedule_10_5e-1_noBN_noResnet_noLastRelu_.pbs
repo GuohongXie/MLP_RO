@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -N gh_all_c_tra1
+#PBS -l nodes=1:ppn=32:gpus=1
+#PBS -l walltime=45:00:00
+#PBS -j oe
+#PBS -q lab_gpu
+
+# set envirenment
+source /public/software/profile.d/cuda10.0.sh
+source /public/software/profile.d/python3.sh
+conda activate py36
+
+# working 
+cd /public/home/hengyi/guohong/MLP_RO/code/model_training/mlp_training_all/mlp_c/
+python3 ./all_c_4layers_128_64_32_1_Relu_BZ64_LR1e-4_WD1e-7_StepLRSchedule_10_5e-1_noBN_noResnet_noLastRelu_.py
