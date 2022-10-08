@@ -146,8 +146,8 @@ if __name__=="__main__":
     valid_data_path = r'../../../../data/train_and_valid_merged_csv_u/valid_data_csv/valid_data_csv_74.csv'
     
 
-    train_dataset = C_Train_Dataset_minMaxScaler_all(train_data_path)
-    valid_dataset = C_Valid_Dataset_minMaxScaler_all(valid_data_path)
+    train_dataset = U_Train_Dataset_minMaxScaler_all(train_data_path)
+    valid_dataset = U_Valid_Dataset_minMaxScaler_all(valid_data_path)
 
 
     

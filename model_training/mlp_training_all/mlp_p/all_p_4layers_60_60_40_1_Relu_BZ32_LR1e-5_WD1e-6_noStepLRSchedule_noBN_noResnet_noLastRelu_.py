@@ -142,12 +142,12 @@ if __name__=="__main__":
     print(os.getcwd())
 
     # prepare the data 
-    train_data_path = r'../../../../data/train_and_valid_merged_csv_u/train_data_csv/train_data_csv_650.csv' 
-    valid_data_path = r'../../../../data/train_and_valid_merged_csv_u/valid_data_csv/valid_data_csv_74.csv'
+    train_data_path = r'../../../../data/train_and_valid_merged_csv_u/train_data_csv_650/train_data_csv_650.csv' 
+    valid_data_path = r'../../../../data/train_and_valid_merged_csv_u/valid_data_csv_74/valid_data_csv_74.csv'
     
 
-    train_dataset = C_Train_Dataset_minMaxScaler_all(train_data_path)
-    valid_dataset = C_Valid_Dataset_minMaxScaler_all(valid_data_path)
+    train_dataset = P_Train_Dataset_minMaxScaler_all(train_data_path)
+    valid_dataset = P_Valid_Dataset_minMaxScaler_all(valid_data_path)
 
 
     
@@ -156,7 +156,7 @@ if __name__=="__main__":
     
     # train the model
     train_model(train_dataset, valid_dataset, model, \
-                epoch_num=20, batch__size = 32, learning_rate=1e-4, weight__decay=1e-6, \
+                epoch_num=20, batch__size = 32, learning_rate=1e-5, weight__decay=1e-6, \
                 using_gpu=True, which_gpu=0, \
                 resume_num=0, load_model=False, model_parameters_folder='../../../results/model_parameters/all/',
                 print_folder='../../../results/training_process_output/all/', \
