@@ -1,0 +1,18 @@
+start time is:2022-10-08 23:01:44
+
+now processing the test_data_csv_10
+now replace the 1th Qtot with u
+now replace the 2th Qtot with u
+now replace the 3th Qtot with u
+now replace the 4th Qtot with u
+now replace the 5th Qtot with u
+now replace the 6th Qtot with u
+now replace the 7th Qtot with u
+now replace the 8th Qtot with u
+now replace the 9th Qtot with u
+now replace the 10th Qtot with u
+
+now processing the valid_data_csv_74
+now replace the 1th Qtot with u
+now replace the 2th Qtot with u
+now replace the 3th Qtot with u
