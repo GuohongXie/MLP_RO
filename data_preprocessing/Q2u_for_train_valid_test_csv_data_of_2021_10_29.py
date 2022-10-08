@@ -52,19 +52,16 @@ def replace_Q_with_u(source_csv_path, target_csv_path, all_info_path, source_csv
                 break
         else:
             continue
-
-                
-
-
-
-
-
-            
-
-
     
-    #print(df_source['u'])
-    #将读取的第一个CSV文件写入合并后的文件保存  
+    df_source['x']    = df_source['x'].round(9)
+    df_source['y']    = df_source['y'].round(9)
+    df_source['z']    = df_source['z'].round(9)
+    df_source['Qtot']    = df_source['Qtot'].round(6)
+    df_source['Dtot'] = df_source['Dtot'].round(7)
+    df_source['U']    = df_source['U'].round(8)
+    df_source['P']    = df_source['P'].round(4)
+    df_source['C']    = df_source['C'].round(2)
+ 
     df_source.to_csv(target_csv_path, header=None, index=False, encoding="utf8")
         
 
@@ -80,12 +77,12 @@ if __name__ == '__main__':
     ################ data_path according to Operating System type   ###############
 
     train_csv_Qtot_path = r'../../data/train_and_valid_merged_csv_Qtot/train_data_csv/train_data_csv_650.csv'   
-    valid_csv_Qtot_path = r'../../data/train_and_valid_merged_csv_Qtot/valid_data_csv/valid_data_csv_650.csv'  
-    test_csv_Qtot_path = r'../../data/train_and_valid_merged_csv_Qtot/test_data_csv/test_data_csv_650.csv'   
+    valid_csv_Qtot_path = r'../../data/train_and_valid_merged_csv_Qtot/valid_data_csv/valid_data_csv_74.csv'  
+    test_csv_Qtot_path = r'../../data/train_and_valid_merged_csv_Qtot/test_data_csv/test_data_csv_10.csv'   
 
     train_csv_u_path = r'../../data/train_and_valid_merged_csv_u/train_data_csv/train_data_csv_650.csv'   
-    valid_csv_u_path = r'../../data/train_and_valid_merged_csv_u/valid_data_csv/valid_data_csv_650.csv'  
-    test_csv_u_path = r'../../data/train_and_valid_merged_csv_u/test_data_csv/test_data_csv_650.csv'
+    valid_csv_u_path = r'../../data/train_and_valid_merged_csv_u/valid_data_csv/valid_data_csv_74.csv'  
+    test_csv_u_path = r'../../data/train_and_valid_merged_csv_u/test_data_csv/test_data_csv_10.csv'
 
     all_raw_734_info_csv_path = r'../../data/all_raw_734_info_D1A_D2A_D1B_D2B_a1_u_Dtot_Qtot.csv'
 
@@ -106,11 +103,20 @@ if __name__ == '__main__':
         log_file.close()
 
     
+    with open(log_path, "a") as log_file:
+        print('\nnow processing the test_data_csv_10', file=log_file)
+        log_file.close()
     replace_Q_with_u(test_csv_Qtot_path, test_csv_u_path, all_raw_734_info_csv_path, test_csv_list, log_path)
 
+    with open(log_path, "a") as log_file:
+        print('\nnow processing the valid_data_csv_74', file=log_file)
+        log_file.close()
+    replace_Q_with_u(valid_csv_Qtot_path, valid_csv_u_path, all_raw_734_info_csv_path, valid_csv_list, log_path)
 
-
-
+    with open(log_path, "a") as log_file:
+        print('\nnow processing the train_data_csv_650', file=log_file)
+        log_file.close()
+    replace_Q_with_u(train_csv_Qtot_path, train_csv_u_path, all_raw_734_info_csv_path, train_csv_list, log_path)
 
 
 
