@@ -19,7 +19,7 @@ from models import *
 from csv_datasets import *
 
 
-torch.manual_seed(707)    # reproducible
+torch.manual_seed(42)    # reproducible
 
 
 
