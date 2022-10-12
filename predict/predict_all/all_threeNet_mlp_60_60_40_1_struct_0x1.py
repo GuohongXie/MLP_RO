@@ -24,7 +24,7 @@ from predict_functions import *
 
 
 #设置随机数种子
-torch.manual_seed(707)    # reproducible
+torch.manual_seed(42)    # reproducible
 
 # set working directory
 os.chdir(sys.path[0])
