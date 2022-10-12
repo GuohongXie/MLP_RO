@@ -11,5 +11,5 @@ source /public/software/profile.d/python3.sh
 conda activate py36
 
 # working 
-cd /public/home/hengyi/guohong/MLP_RO/code/predict/predict_all/
+cd /public/home/hengyi/guohong/MLP_RO_2022_10_08/code/predict/predict_all/
 python3 ./all_threeNet_mlp_60_60_40_1_struct_0x1.py
