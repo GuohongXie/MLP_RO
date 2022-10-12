@@ -1,0 +1,9 @@
+start time is: 2022-10-10 01:29:52
+the lenth of train_dataset is 148374854
+the lenth of valid_dataset is 16860447
+epoch: 0, loss = 0.001062191
+R2_valid: 0.535525411, valid_loss_mse: 0.002553278, valid_loss_rmse: 0.050529975
+epoch: 1, loss = 0.001273562
+R2_valid: 0.567299473, valid_loss_mse: 0.002378614, valid_loss_rmse: 0.048771035
+epoch: 2, loss = 0.000933544
+R2_valid: 0.560308990, valid_loss_mse: 0.002417039, valid_loss_rmse: 0.049163390

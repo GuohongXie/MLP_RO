@@ -5,3 +5,11 @@ epoch: 0, loss = 0.009714624
 R2_valid: 0.528190725, valid_loss_mse: 0.002593598, valid_loss_rmse: 0.050927375
 epoch: 1, loss = 0.000500105
 R2_valid: 0.552724021, valid_loss_mse: 0.002458734, valid_loss_rmse: 0.049585622
+epoch: 2, loss = 0.007332433
+R2_valid: 0.564254428, valid_loss_mse: 0.002395351, valid_loss_rmse: 0.048942327
+epoch: 3, loss = 0.000235395
+R2_valid: 0.590755584, valid_loss_mse: 0.002249675, valid_loss_rmse: 0.047430739
+epoch: 4, loss = 0.010644604
+R2_valid: 0.587008749, valid_loss_mse: 0.002270269, valid_loss_rmse: 0.047647338
+epoch: 5, loss = 0.018485975
+R2_valid: 0.592794669, valid_loss_mse: 0.002238464, valid_loss_rmse: 0.047312409
