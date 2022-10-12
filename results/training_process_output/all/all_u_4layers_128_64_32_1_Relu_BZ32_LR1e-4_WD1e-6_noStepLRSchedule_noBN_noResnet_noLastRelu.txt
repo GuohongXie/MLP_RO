@@ -1,0 +1,25 @@
+start time is: 2022-10-10 01:04:11
+the lenth of train_dataset is 148374854
+the lenth of valid_dataset is 16860447
+epoch: 0, loss = 0.001678762
+R2_valid: 0.379114468, valid_loss_mse: 0.007857795, valid_loss_rmse: 0.088644207
+epoch: 1, loss = 0.000159370
+R2_valid: 0.476461562, valid_loss_mse: 0.006625798, valid_loss_rmse: 0.081399001
+epoch: 2, loss = 0.001959656
+R2_valid: 0.509312169, valid_loss_mse: 0.006210044, valid_loss_rmse: 0.078803837
+epoch: 3, loss = 0.010033219
+R2_valid: 0.556423014, valid_loss_mse: 0.005613819, valid_loss_rmse: 0.074925423
+epoch: 4, loss = 0.000202859
+R2_valid: 0.528271122, valid_loss_mse: 0.005970104, valid_loss_rmse: 0.077266447
+epoch: 5, loss = 0.000858343
+R2_valid: 0.532438028, valid_loss_mse: 0.005917362, valid_loss_rmse: 0.076924391
+epoch: 6, loss = 0.004676051
+R2_valid: 0.539002030, valid_loss_mse: 0.005834299, valid_loss_rmse: 0.076382585
+epoch: 7, loss = 0.011233847
+R2_valid: 0.520293072, valid_loss_mse: 0.006071074, valid_loss_rmse: 0.077917099
+epoch: 8, loss = 0.003064766
+R2_valid: 0.511354707, valid_loss_mse: 0.006184187, valid_loss_rmse: 0.078639604
+epoch: 9, loss = 0.006305629
+R2_valid: 0.537988877, valid_loss_mse: 0.005847118, valid_loss_rmse: 0.076466449
+epoch: 10, loss = 0.000170252
+R2_valid: 0.527011023, valid_loss_mse: 0.005986048, valid_loss_rmse: 0.077369556
