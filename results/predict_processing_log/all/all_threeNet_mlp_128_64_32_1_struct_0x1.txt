@@ -1,0 +1,17 @@
+start_time is: 2022-10-12 17:21:07
+
+
+begin to process 0th csv
+begin to process 1th csv
+begin to process 2th csv
+begin to process 3th csv
+begin to process 4th csv
+begin to process 5th csv
+begin to process 6th csv
+begin to process 7th csv
+begin to process 8th csv
+begin to process 9th csv
+end_time is: 2022-10-12 20:23:00
+all done, your predicts are ready
+
+
