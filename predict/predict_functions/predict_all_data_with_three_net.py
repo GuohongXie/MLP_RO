@@ -47,24 +47,24 @@ def predict_all_data_with_three_net(source_csv_folder, target_csv_folder, model_
                                 encoding="utf8")
         
         #csv_pred.dropna(inplace=True)
-        csv_temp[['x']] = preprocessing.MinMaxScaler().fit_transform(csv_temp[['x']])
-        csv_temp[['y']] = preprocessing.MinMaxScaler().fit_transform(csv_temp[['y']])
-        csv_temp[['z']] = preprocessing.MinMaxScaler().fit_transform(csv_temp[['z']])
-        csv_temp['x'] = csv_temp['x'].round(5)
-        csv_temp['y'] = csv_temp['y'].round(5)
-        csv_temp['z'] = csv_temp['z'].round(5)
-        csv_temp["D1A"] = (csv_temp["D1A"]-0.0003)/0.0003
-        csv_temp["D2A"] = (csv_temp["D2A"]-0.0002)/0.0001
-        csv_temp["D1B"] = (csv_temp["D1B"]-0.0003)/0.0003
-        csv_temp["D2B"] = (csv_temp["D2B"]-0.0002)/0.0001
+        csv_temp["x"]     = (csv_temp["x"])/0.026853
+        csv_temp["y"]     = (csv_temp["y"]+0.0024076)/0.0048156
+        csv_temp["z"]     = (csv_temp["z"]+0.000545)/0.00109
+        csv_temp["D1A"]   = (csv_temp["D1A"]-0.0003)/0.0003
+        csv_temp["D2A"]   = (csv_temp["D2A"]-0.0002)/0.0001
+        csv_temp["D1B"]   = (csv_temp["D1B"]-0.0003)/0.0003
+        csv_temp["D2B"]   = (csv_temp["D2B"]-0.0002)/0.0001
         csv_temp["angle"] = (csv_temp["angle"]-30)/90
-        csv_temp["u"] = (csv_temp["u"]-0.045086)/0.148104
-        csv_temp["Dtot"] = (csv_temp["Dtot"]-0.0005)/0.0006
+        csv_temp["u"]     = (csv_temp["u"]-0.045905)/0.147285
+        csv_temp["Dtot"]  = (csv_temp["Dtot"]-0.0005)/0.0006
+        csv_temp["U"]     = (csv_temp["U"])/0.6308
+        csv_temp["P"]     = (csv_temp["P"]+52.899)/2224.699
+        csv_temp["C"]     = (csv_temp["C"]-600)/1292.6
     
         for j in range(len(csv_pred)):
-            csv_pred.iloc[j, 10]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_u_used, device_2=device, using_gpu_2=using_gpu)[0]*0.62367
+            csv_pred.iloc[j, 10]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_u_used, device_2=device, using_gpu_2=using_gpu)[0]*0.6308
             csv_pred.iloc[j, 11]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_p_used, device_2=device, using_gpu_2=using_gpu)[0]*2224.699 - 52.899
-            csv_pred.iloc[j, 12]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_c_used, device_2=device, using_gpu_2=using_gpu)[0]*1282.6 + 610
+            csv_pred.iloc[j, 12]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_c_used, device_2=device, using_gpu_2=using_gpu)[0]*1292.6 + 600
             
         csv_pred['U'] = csv_pred['U'].round(8)
         csv_pred['P'] = csv_pred['P'].round(4)
