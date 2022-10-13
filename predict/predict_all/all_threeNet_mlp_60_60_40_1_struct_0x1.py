@@ -39,8 +39,8 @@ this_file_name = this_file_name[:-3]
 model_state_dict_path_u = r"../../results/model_parameters/all/all_u_4layers_60_60_40_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch5.pth"
 model_state_dict_path_p = r"../../results/model_parameters/all/all_p_4layers_60_60_40_1_Relu_BZ32_LR1e-5_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch3.pth"
 model_state_dict_path_c = r"../../results/model_parameters/all/all_c_4layers_60_60_40_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch3.pth"
-csv_raw_folder = r"../../../data/test_data/raw_data_2021_10_29/"
-csv_pred_folder = r"../../../data/predict_data/all/" + this_file_name + "/"
+csv_raw_folder = r"../../../data/test_data_u/u_raw_data_2021_10_29/"
+csv_pred_folder = r"../../../data/predict_data_u/all/" + this_file_name + "/"
 print_log_path = r"../../results/predict_processing_log/all/" + this_file_name + ".txt"
 
 folder_temp = os.path.abspath(csv_pred_folder)
