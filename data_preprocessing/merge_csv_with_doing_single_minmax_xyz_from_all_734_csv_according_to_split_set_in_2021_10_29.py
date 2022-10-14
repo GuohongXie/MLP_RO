@@ -25,7 +25,7 @@ def merge_csv(raw_csv_folder_1, save_path_1, csv_list_1):  # 以 _1 结尾标记
     df['Dtot'] = df['Dtot'].round(7)
     df['U']    = df['U'].round(8)
     df['P']    = df['P'].round(4)
-    df['C']    = df['C'].round(3)
+    df['C']    = df['C'].round(2)
     
     
     #将读取的第一个CSV文件写入合并后的文件保存  
@@ -47,7 +47,7 @@ def merge_csv(raw_csv_folder_1, save_path_1, csv_list_1):  # 以 _1 结尾标记
         df['Dtot'] = df['Dtot'].round(7)
         df['U']    = df['U'].round(8)
         df['P']    = df['P'].round(4)
-        df['C']    = df['C'].round(3)
+        df['C']    = df['C'].round(2)
          
         df.to_csv(save_path_1, header=None, index=False, encoding="utf8", mode='a') # mode='a'表示追加写入的意思
 
@@ -62,11 +62,11 @@ if __name__ == '__main__':
     
 
     ################ data_path according to Operating System type   ###############
-    raw_csv_folder = '../../data/raw_Qtot_later_csv_all_734/'    
-    train_data_save_path = '../../data/train_and_valid_merged_csv_Qtot_single_minmax_xyz_later/train_data_csv/train_data_csv_650.csv' 
-    valid_data_save_path = '../../data/train_and_valid_merged_csv_Qtot_single_minmax_xyz_later/valid_data_csv/valid_data_csv_74.csv'
-    test_data_save_path  = '../../data/train_and_valid_merged_csv_Qtot_single_minmax_xyz_later/test_data_csv/test_data_csv_10.csv'
-    set_split_recorder_txt_file_path = '../experiment_record/set_split_Qtot_single_minmax_xyz_layter.txt'
+    raw_csv_folder = '../../data/raw_csv_all_734/'    
+    train_data_save_path = '../../data/train_and_valid_merged_csv_single_minmax_xyz/train_data_csv/train_data_csv_650.csv' 
+    valid_data_save_path = '../../data/train_and_valid_merged_csv_single_minmax_xyz/valid_data_csv/valid_data_csv_74.csv'
+    test_data_save_path  = '../../data/train_and_valid_merged_csv_single_minmax_xyz/test_data_csv/test_data_csv_10.csv'
+    set_split_recorder_txt_file_path = '../merge_csv_with_doing_single_minmax_xyz_from_all_734_csv_according_to_split_set_in_2021_10_29.txt'
 
 
     # record time

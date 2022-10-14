@@ -142,8 +142,8 @@ if __name__=="__main__":
     print(os.getcwd())
 
     # prepare the data 
-    train_data_path = r'../../../../data/train_and_valid_merged_csv_single__minmax_xyz/train_data_csv/train_data_csv_650.csv' 
-    valid_data_path = r'../../../../data/train_and_valid_merged_csv_single__minmax_xyz/valid_data_csv/valid_data_csv_74.csv'
+    train_data_path = r'../../../../data/train_and_valid_merged_csv_single_minmax_xyz/train_data_csv/train_data_csv_650.csv' 
+    valid_data_path = r'../../../../data/train_and_valid_merged_csv_single_minmax_xyz/valid_data_csv/valid_data_csv_74.csv'
     
 
     train_dataset = P_Train_Dataset_single_minMaxScaler(train_data_path)
