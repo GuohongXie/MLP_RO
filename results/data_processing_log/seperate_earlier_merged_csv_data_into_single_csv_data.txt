@@ -1,0 +1,53 @@
+start time is:2022-10-14 19:18:11
+
+now processing the test_data_csv_10
+now seperate the 1th csv file
+now seperate the 2th csv file
+now seperate the 3th csv file
+now seperate the 4th csv file
+now seperate the 5th csv file
+now seperate the 6th csv file
+now seperate the 7th csv file
+now seperate the 8th csv file
+now seperate the 9th csv file
+now seperate the 10th csv file
+
+now processing the valid_data_csv_74
+now seperate the 1th csv file
+now seperate the 2th csv file
+now seperate the 3th csv file
+now seperate the 4th csv file
+now seperate the 5th csv file
+now seperate the 6th csv file
+now seperate the 7th csv file
+now seperate the 8th csv file
+now seperate the 9th csv file
+now seperate the 10th csv file
+now seperate the 11th csv file
+now seperate the 12th csv file
+now seperate the 13th csv file
+now seperate the 14th csv file
+now seperate the 15th csv file
+now seperate the 16th csv file
+now seperate the 17th csv file
+now seperate the 18th csv file
+now seperate the 19th csv file
+now seperate the 20th csv file
+now seperate the 21th csv file
+now seperate the 22th csv file
+now seperate the 23th csv file
+now seperate the 24th csv file
+now seperate the 25th csv file
+now seperate the 26th csv file
+now seperate the 27th csv file
+now seperate the 28th csv file
+now seperate the 29th csv file
+now seperate the 30th csv file
+now seperate the 31th csv file
+now seperate the 32th csv file
+now seperate the 33th csv file
+now seperate the 34th csv file
+now seperate the 35th csv file
+now seperate the 36th csv file
+now seperate the 37th csv file
+now seperate the 38th csv file
