@@ -6,13 +6,13 @@ from sklearn import preprocessing
 
 
 #dataset definition
-class C_Valid_Dataset_minMaxScaler_all(torch.utils.data.Dataset):
+class C_Valid_Dataset_all_minMaxScaler(torch.utils.data.Dataset):
     #load the dataset
     def __init__(self,path_2):
         # load the csv file as a dataframe
         valid_csv = pd.read_csv(path_2,\
                                 header = None,\
-                                names=['x','y','z','D1A','D2A','D1B','D2B','angle','u','Dtot','U','P','C'],\
+                                names=['x','y','z','D1A','D2A','D1B','D2B','angle','Qtot','Dtot','U','P','C'],\
                                 encoding="utf8")
         #valid_csv.dropna(inplace=True)
         valid_csv["x"]     = (valid_csv["x"])/0.026853
@@ -23,7 +23,7 @@ class C_Valid_Dataset_minMaxScaler_all(torch.utils.data.Dataset):
         valid_csv["D1B"]   = (valid_csv["D1B"]-0.0003)/0.0003
         valid_csv["D2B"]   = (valid_csv["D2B"]-0.0002)/0.0001
         valid_csv["angle"] = (valid_csv["angle"]-30)/90
-        valid_csv["u"]     = (valid_csv["u"]-0.045905)/0.147285
+        valid_csv["Qtot"]  = (valid_csv["Qtot"]-45.373)/327.707
         valid_csv["Dtot"]  = (valid_csv["Dtot"]-0.0005)/0.0006
         valid_csv["U"]     = (valid_csv["U"])/0.6308
         valid_csv["P"]     = (valid_csv["P"]+52.899)/2224.699

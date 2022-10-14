@@ -6,13 +6,13 @@ from sklearn import preprocessing
 
 
 #dataset definition
-class P_Train_Dataset_minMaxScaler_all(torch.utils.data.Dataset):
+class P_Train_Dataset_all_minMaxScaler(torch.utils.data.Dataset):
     #load the dataset
     def __init__(self,path_1):
         # load the csv file as a dataframe
         train_csv = pd.read_csv(path_1,\
                          header = None,\
-                         names=['x','y','z','D1A','D2A','D1B','D2B','angle','u','Dtot','U','P','C'],\
+                         names=['x','y','z','D1A','D2A','D1B','D2B','angle','Qtot','Dtot','U','P','C'],\
                          encoding="utf8")  # df的type是<class 'pandas.core.frame.DataFrame'>
         #df.dropna(inplace=True) #这一行不需要
         train_csv["x"]     = (train_csv["x"])/0.026853
@@ -23,7 +23,7 @@ class P_Train_Dataset_minMaxScaler_all(torch.utils.data.Dataset):
         train_csv["D1B"]   = (train_csv["D1B"]-0.0003)/0.0003
         train_csv["D2B"]   = (train_csv["D2B"]-0.0002)/0.0001
         train_csv["angle"] = (train_csv["angle"]-30)/90
-        train_csv["u"]     = (train_csv["u"]-0.045905)/0.147285
+        train_csv["Qtot"]  = (train_csv["Qtot"]-45.373)/327.707
         train_csv["Dtot"]  = (train_csv["Dtot"]-0.0005)/0.0006
         train_csv["U"]     = (train_csv["U"])/0.6308
         train_csv["P"]     = (train_csv["P"]+52.899)/2224.699
