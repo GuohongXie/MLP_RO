@@ -1,0 +1,12 @@
+start_time is: 2022-10-14 14:25:57
+
+
+start_time is: 2022-10-14 14:28:24
+
+
+begin to process 0th csv
+begin to process 1th csv
+begin to process 2th csv
+begin to process 3th csv
+begin to process 4th csv
+begin to process 5th csv
