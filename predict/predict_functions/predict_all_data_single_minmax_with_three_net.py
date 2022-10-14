@@ -16,7 +16,7 @@ from function_predict import function_predict
 
 
 
-def Qtot_predict_all_data_with_three_net_p(source_csv_folder, target_csv_folder, model_p_used, using_gpu=True, which_gpu=0, log_path = ''):
+def predict_all_data_single_minmax_with_three_net(source_csv_folder, target_csv_folder, model_u_used, model_p_used, model_c_used, using_gpu=True, which_gpu=0, log_path = ''):
     # 此函数将xyz未经归一化的csv测试数据作为source_csv_folder
     # set device
     if using_gpu:
@@ -24,9 +24,9 @@ def Qtot_predict_all_data_with_three_net_p(source_csv_folder, target_csv_folder,
         device = torch.device(cuda_name)
     else:
         device = torch.device("cpu")
-    #model_u_used = model_u_used.to(device)
+    model_u_used = model_u_used.to(device)
     model_p_used = model_p_used.to(device)
-    #model_c_used = model_c_used.to(device)
+    model_c_used = model_c_used.to(device)
 
     #批量生成新模型通道数据
     csv_raw_list = os.listdir(source_csv_folder)
@@ -62,9 +62,9 @@ def Qtot_predict_all_data_with_three_net_p(source_csv_folder, target_csv_folder,
         csv_temp["C"]     = (csv_temp["C"]-600)/1292.6
     
         for j in range(len(csv_pred)):
-            #csv_pred.iloc[j, 10]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_u_used, device_2=device, using_gpu_2=using_gpu)[0]*0.6308
+            csv_pred.iloc[j, 10]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_u_used, device_2=device, using_gpu_2=using_gpu)[0]*0.6308
             csv_pred.iloc[j, 11]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_p_used, device_2=device, using_gpu_2=using_gpu)[0]*2224.699 - 52.899
-            #csv_pred.iloc[j, 12]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_c_used, device_2=device, using_gpu_2=using_gpu)[0]*1292.6 + 600
+            csv_pred.iloc[j, 12]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_c_used, device_2=device, using_gpu_2=using_gpu)[0]*1292.6 + 600
             
         csv_pred['x']    = csv_pred['x'].round(9)
         csv_pred['y']    = csv_pred['y'].round(9)
