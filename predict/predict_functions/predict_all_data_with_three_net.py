@@ -66,8 +66,13 @@ def predict_all_data_with_three_net(source_csv_folder, target_csv_folder, model_
             csv_pred.iloc[j, 11]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_p_used, device_2=device, using_gpu_2=using_gpu)[0]*2224.699 - 52.899
             csv_pred.iloc[j, 12]  = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_c_used, device_2=device, using_gpu_2=using_gpu)[0]*1292.6 + 600
             
-        csv_pred['U'] = csv_pred['U'].round(8)
-        csv_pred['P'] = csv_pred['P'].round(4)
-        csv_pred['C'] = csv_pred['C'].round(3)
+        csv_pred['x']    = csv_pred['x'].round(9)
+        csv_pred['y']    = csv_pred['y'].round(9)
+        csv_pred['z']    = csv_pred['z'].round(9)
+        csv_pred['u']    = csv_pred['u'].round(6)
+        csv_pred['Dtot'] = csv_pred['Dtot'].round(7)
+        csv_pred['U']    = csv_pred['U'].round(8)
+        csv_pred['P']    = csv_pred['P'].round(4)
+        csv_pred['C']    = csv_pred['C'].round(3)
 
         csv_pred.to_csv(target_csv_folder + csv_raw_list[i], header=None, index=False, encoding="utf8")
