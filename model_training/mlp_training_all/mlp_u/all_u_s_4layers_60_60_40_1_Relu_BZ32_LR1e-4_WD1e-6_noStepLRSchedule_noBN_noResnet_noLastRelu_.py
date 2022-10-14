@@ -141,18 +141,18 @@ if __name__=="__main__":
     os.chdir(sys.path[0])
     print(os.getcwd())
 
-    # prepare the data 
-    train_data_path = r'../../../../data/train_and_valid_merged_csv_u/train_data_csv/train_data_csv_650.csv' 
-    valid_data_path = r'../../../../data/train_and_valid_merged_csv_u/valid_data_csv/valid_data_csv_74.csv'
+     # prepare the data 
+    train_data_path = r'../../../../data/train_and_valid_merged_csv_single__minmax_xyz/train_data_csv/train_data_csv_650.csv' 
+    valid_data_path = r'../../../../data/train_and_valid_merged_csv_single__minmax_xyz/valid_data_csv/valid_data_csv_74.csv'
     
 
-    train_dataset = C_Train_Dataset_minMaxScaler_all(train_data_path)
-    valid_dataset = C_Valid_Dataset_minMaxScaler_all(valid_data_path)
+    train_dataset = U_Train_Dataset_single_minMaxScaler(train_data_path)
+    valid_dataset = U_Valid_Dataset_single_minMaxScaler(valid_data_path)
 
 
     
     # define the network
-    model = MLP_128_64_32_1(10)
+    model = MLP_60_60_40_1(10)
     
     # train the model
     train_model(train_dataset, valid_dataset, model, \

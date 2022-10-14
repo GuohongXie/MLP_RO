@@ -12,129 +12,14 @@ import numpy as np
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 
-import torch.utils.data
-import pandas as pd
-import sklearn
 
+os.chdir(sys.path[0])
+sys.path.append(os.path.realpath("../../.."))
+from models import *
+from csv_datasets import *
 
 
 torch.manual_seed(42)    # reproducible
-
-
-
-
-
-
-#dataset definition
-class P_Train_Dataset_minMaxScaler_all(torch.utils.data.Dataset):
-    #load the dataset
-    def __init__(self,path_1):
-        # load the csv file as a dataframe
-        train_csv = pd.read_csv(path_1,\
-                         header = None,\
-                         names=['x','y','z','D1A','D2A','D1B','D2B','angle','Qtot','Dtot','U','P','C'],\
-                         encoding="utf8")  # df的type是<class 'pandas.core.frame.DataFrame'>
-        #df.dropna(inplace=True) #这一行不需要
-        train_csv["x"]     = (train_csv["x"])/0.026853
-        train_csv["y"]     = (train_csv["y"]+0.0024076)/0.0048156
-        train_csv["z"]     = (train_csv["z"]+0.000545)/0.00109
-        train_csv["D1A"]   = (train_csv["D1A"]-0.0003)/0.0003
-        train_csv["D2A"]   = (train_csv["D2A"]-0.0002)/0.0001
-        train_csv["D1B"]   = (train_csv["D1B"]-0.0003)/0.0003
-        train_csv["D2B"]   = (train_csv["D2B"]-0.0002)/0.0001
-        train_csv["angle"] = (train_csv["angle"]-30)/90
-        train_csv["Qtot"]  = (train_csv["Qtot"]-45.373)/327.707
-        train_csv["Dtot"]  = (train_csv["Dtot"]-0.0005)/0.0006
-        train_csv["U"]     = (train_csv["U"])/0.6308
-        train_csv["P"]     = (train_csv["P"]+52.899)/2224.699
-        train_csv["C"]     = (train_csv["C"]-600)/1292.6
-        #df = sklearn.preprocessing.MinMaxScaler().fit_transform(df)  #这一行把df的type变成了<class 'numpy.ndarray'>，现在不需要这一行
-        # store the inputs and outputs
-        self.X = train_csv.values[:, :-3].astype('float32')   #这一行之后同样，X的type为<class 'numpy.ndarray'>
-        self.y = train_csv.values[:, -2].astype('float32')
-        # ensure target has the right shape
-        self.y = self.y.reshape(len(self.y),1)
-    # number of rows in the dataset
-    def __len__(self):
-        return len(self.X)
-    # get a row at an index
-    def __getitem__(self,idx):
-        return [self.X[idx],self.y[idx]]
-
-
-
-class P_Valid_Dataset_minMaxScaler_all(torch.utils.data.Dataset):
-    #load the dataset
-    def __init__(self,path_2):
-        # load the csv file as a dataframe
-        valid_csv = pd.read_csv(path_2,\
-                                header = None,\
-                                names=['x','y','z','D1A','D2A','D1B','D2B','angle','Qtot','Dtot','U','P','C'],\
-                                encoding="utf8")
-        #valid_csv.dropna(inplace=True)
-        valid_csv["x"]     = (valid_csv["x"])/0.026853
-        valid_csv["y"]     = (valid_csv["y"]+0.0024076)/0.0048156
-        valid_csv["z"]     = (valid_csv["z"]+0.000545)/0.00109
-        valid_csv["D1A"]   = (valid_csv["D1A"]-0.0003)/0.0003
-        valid_csv["D2A"]   = (valid_csv["D2A"]-0.0002)/0.0001
-        valid_csv["D1B"]   = (valid_csv["D1B"]-0.0003)/0.0003
-        valid_csv["D2B"]   = (valid_csv["D2B"]-0.0002)/0.0001
-        valid_csv["angle"] = (valid_csv["angle"]-30)/90
-        valid_csv["Qtot"]  = (valid_csv["Qtot"]-45.373)/327.707
-        valid_csv["Dtot"]  = (valid_csv["Dtot"]-0.0005)/0.0006
-        valid_csv["U"]     = (valid_csv["U"])/0.6308
-        valid_csv["P"]     = (valid_csv["P"]+52.899)/2224.699
-        valid_csv["C"]     = (valid_csv["C"]-600)/1292.6
-        # store the inputs and outputs
-        self.valX = valid_csv.values[:, :-3].astype('float32')
-        self.valy = valid_csv.values[:, -2].astype('float32')
-        # ensure target has the right shape
-        self.valy = self.valy.reshape(len(self.valy),1)
-    # number of rows in the dataset
-    def __len__(self):
-        return len(self.valX)
-    # get a row at an index
-    def __getitem__(self,idx):
-        return [self.valX[idx],self.valy[idx]]
-
-
-
-# model definition
-class MLP_60_60_40_1(torch.nn.Module):
-    # define model elements
-    def __init__(self,n_inputs):
-        super(MLP_60_60_40_1,self).__init__()
-        # input to first hidden layer
-        self.hidden1 = torch.nn.Linear(n_inputs,60)
-        torch.nn.init.xavier_uniform_(self.hidden1.weight)
-        self.act1 = torch.nn.ReLU()
-        # second hidden layer
-        self.hidden2 = torch.nn.Linear(60,60)
-        torch.nn.init.xavier_uniform_(self.hidden2.weight)
-        self.act2 = torch.nn.ReLU()
-        #third hidden layer and output
-        self.hidden3 = torch.nn.Linear(60,40)
-        torch.nn.init.xavier_uniform_(self.hidden3.weight)
-        self.act3 = torch.nn.ReLU()
-        #forth hidden layer and output
-        self.hidden4 = torch.nn.Linear(40,1)
-        torch.nn.init.xavier_uniform_(self.hidden4.weight)
-        
-
-    # forward propagate input
-    def forward(self,X):
-        # input to the first hidden layer
-        X = self.hidden1(X)
-        X = self.act1(X)
-        # second hidden layer 
-        X = self.hidden2(X)
-        X = self.act2(X)
-        # third hidden layer and output
-        X = self.hidden3(X)
-        X = self.act3(X)
-        # forth hidden layer and output
-        X = self.hidden4(X)
-        return X
 
 
 
@@ -257,12 +142,12 @@ if __name__=="__main__":
     print(os.getcwd())
 
     # prepare the data 
-    train_data_path = r'../../../../data/train_and_valid_merged_csv_Qtot/train_data_csv/train_data_csv_650.csv' 
-    valid_data_path = r'../../../../data/train_and_valid_merged_csv_Qtot/valid_data_csv/valid_data_csv_74.csv'
+    train_data_path = r'../../../../data/train_and_valid_merged_csv_single__minmax_xyz/train_data_csv/train_data_csv_650.csv' 
+    valid_data_path = r'../../../../data/train_and_valid_merged_csv_single__minmax_xyz/valid_data_csv/valid_data_csv_74.csv'
     
 
-    train_dataset = P_Train_Dataset_minMaxScaler_all(train_data_path)
-    valid_dataset = P_Valid_Dataset_minMaxScaler_all(valid_data_path)
+    train_dataset = C_Train_Dataset_single_minMaxScaler(train_data_path)
+    valid_dataset = C_Valid_Dataset_single_minMaxScaler(valid_data_path)
 
 
     
@@ -271,7 +156,7 @@ if __name__=="__main__":
     
     # train the model
     train_model(train_dataset, valid_dataset, model, \
-                epoch_num=20, batch__size = 32, learning_rate=1e-5, weight__decay=1e-6, \
+                epoch_num=20, batch__size = 32, learning_rate=1e-4, weight__decay=1e-6, \
                 using_gpu=True, which_gpu=0, \
                 resume_num=0, load_model=False, model_parameters_folder='../../../results/model_parameters/all/',
                 print_folder='../../../results/training_process_output/all/', \
