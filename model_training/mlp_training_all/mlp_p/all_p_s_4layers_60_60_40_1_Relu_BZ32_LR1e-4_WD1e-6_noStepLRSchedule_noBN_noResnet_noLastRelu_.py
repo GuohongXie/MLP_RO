@@ -147,7 +147,7 @@ if __name__=="__main__":
     
 
     train_dataset = P_Train_Dataset_single_minMaxScaler(train_data_path)
-    valid_dataset = P_valid_Dataset_single_minMaxScaler(valid_data_path)
+    valid_dataset = P_Valid_Dataset_single_minMaxScaler(valid_data_path)
 
 
     
