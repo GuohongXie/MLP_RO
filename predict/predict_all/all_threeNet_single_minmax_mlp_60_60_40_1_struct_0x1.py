@@ -39,8 +39,8 @@ this_file_name = this_file_name[:-3]
 model_state_dict_path_u = r"../../results/model_parameters/all/all_u_4layers_60_60_40_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch5.pth"
 model_state_dict_path_p = r"../../results/model_parameters/all/all_p_4layers_60_60_40_1_Relu_BZ32_LR1e-5_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch3.pth"
 model_state_dict_path_c = r"../../results/model_parameters/all/all_c_4layers_60_60_40_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch3.pth"
-csv_raw_folder = r"../../../data/test_data_u/u_raw_data_2021_10_29/"
-csv_pred_folder = r"../../../data/predict_data_u/all/" + this_file_name + "/"
+csv_raw_folder = r"../../../data/test_data/"
+csv_pred_folder = r"../../../data/predict_data/all/" + this_file_name + "/"
 print_log_path = r"../../results/predict_processing_log/all/" + this_file_name + ".txt"
 
 folder_temp = os.path.abspath(csv_pred_folder)
@@ -66,7 +66,7 @@ with open(print_log_path, "a") as log_file:
 print("start_time is: %s" %(start_time))
 
 #predict_layer_data_with_one_net(csv_raw_folder, csv_pred_folder, model_u_p_c, using_gpu=True, which_gpu=0, log_path = print_log_path)
-predict_all_data_with_three_net(csv_raw_folder, csv_pred_folder, model_u, model_p, model_c, using_gpu=True, which_gpu=0, log_path = print_log_path)
+predict_all_data_single_minmax_with_three_net(csv_raw_folder, csv_pred_folder, model_u, model_p, model_c, using_gpu=True, which_gpu=0, log_path = print_log_path)
 
 
 end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())

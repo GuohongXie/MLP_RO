@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -N gh_pre
+#PBS -l nodes=1:ppn=32:gpus=1
+#PBS -l walltime=06:00:00
+#PBS -j oe
+#PBS -q lab_gpu
+
+# set envirenment
+source /public/software/profile.d/cuda10.0.sh
+source /public/software/profile.d/python3.sh
+conda activate py36
+
+# working
+cd /public/home/hengyi/guohong/MLP_RO_2022_10_15/code/predict/predict_all/
+python3 ./all_threeNet_single_minmax_mlp_60_60_40_1_struct_0x1.py

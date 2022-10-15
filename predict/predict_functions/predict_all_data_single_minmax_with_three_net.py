@@ -47,9 +47,9 @@ def predict_all_data_single_minmax_with_three_net(source_csv_folder, target_csv_
                                 encoding="utf8")
         
         #csv_pred.dropna(inplace=True)
-        csv_temp["x"]     = (csv_temp["x"])/0.026853
-        csv_temp["y"]     = (csv_temp["y"]+0.0024076)/0.0048156
-        csv_temp["z"]     = (csv_temp["z"]+0.000545)/0.00109
+        csv_temp[['x']]   = preprocessing.MinMaxScaler().fit_transform(csv_temp[['x']])
+        csv_temp[['y']]   = preprocessing.MinMaxScaler().fit_transform(csv_temp[['y']])
+        csv_temp[['z']]   = preprocessing.MinMaxScaler().fit_transform(csv_temp[['z']])
         csv_temp["D1A"]   = (csv_temp["D1A"]-0.0003)/0.0003
         csv_temp["D2A"]   = (csv_temp["D2A"]-0.0002)/0.0001
         csv_temp["D1B"]   = (csv_temp["D1B"]-0.0003)/0.0003
@@ -73,6 +73,6 @@ def predict_all_data_single_minmax_with_three_net(source_csv_folder, target_csv_
         csv_pred['Dtot'] = csv_pred['Dtot'].round(7)
         csv_pred['U']    = csv_pred['U'].round(8)
         csv_pred['P']    = csv_pred['P'].round(4)
-        csv_pred['C']    = csv_pred['C'].round(3)
+        csv_pred['C']    = csv_pred['C'].round(2)
 
         csv_pred.to_csv(target_csv_folder + csv_raw_list[i], header=None, index=False, encoding="utf8")
