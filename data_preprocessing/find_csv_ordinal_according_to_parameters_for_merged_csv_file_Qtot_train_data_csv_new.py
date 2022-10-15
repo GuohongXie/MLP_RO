@@ -70,7 +70,7 @@ if __name__ == '__main__':
             print("cnt now is %d"%cnt)
             with open(print_log_file_path, "a") as log_file:
                 print("cnt now is %d"%cnt, file=log_file)
-                print(df_source_Qtot_csv[i], file=log_file)
+                print(df_source_Qtot_csv[i:i+1], file=log_file)
                 log_file.close()
         else:
             continue

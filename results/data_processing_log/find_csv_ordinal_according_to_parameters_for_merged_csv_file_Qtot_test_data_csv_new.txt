@@ -1,0 +1,48 @@
+start time is: 2022-10-15 01:55:54
+the lenth of df_raw_info is 734
+the lenth of df_source_Qtot_csv is 2265112
+start time is: 2022-10-15 01:56:46
+the lenth of df_raw_info is 734
+the lenth of df_source_Qtot_csv is 2265113
+cnt now is 2
+start time is: 2022-10-15 01:58:35
+the lenth of df_raw_info is 734
+the lenth of df_source_Qtot_csv is 2265113
+cnt now is 2
+               x         y         z      D1A       D2A       D1B       D2B  angle   Qtot      Dtot    U       P       C
+202717  0.026409  0.000598 -0.000005  0.00045  0.000275  0.000525  0.000275     30  81.23  0.000785  0.0  3.7538  621.32
+cnt now is 3
+               x         y         z      D1A       D2A     D1B       D2B  angle    Qtot     Dtot    U        P       C
+478614  0.025397 -0.001038 -0.000299  0.00045  0.000225  0.0003  0.000225     48  138.09  0.00065  0.0  0.10468  804.51
+cnt now is 4
+               x         y         z       D1A     D2A       D1B     D2B  angle   Qtot    Dtot    U         P       C
+705927  0.020626 -0.001745 -0.000389  0.000525  0.0003  0.000375  0.0002     84  105.7  0.0008  0.0 -0.000874  1144.3
+cnt now is 5
+               x         y         z      D1A       D2A      D1B      D2B  angle   Qtot     Dtot    U         P       C
+929882  0.017473  0.002032  0.000361  0.00045  0.000225  0.00045  0.00025    102  196.2  0.00074  0.0  0.006413  1148.6
+cnt now is 6
+                x         y         z     D1A       D2A      D1B     D2B  angle    Qtot     Dtot    U         P       C
+1139267  0.017495  0.002036  0.000303  0.0003  0.000275  0.00045  0.0002    102  86.958  0.00065  0.0 -0.002009  1145.0
+cnt now is 7
+              x         y         z       D1A       D2A     D1B       D2B  angle   Qtot      Dtot    U         P       C
+1418553  0.0139  0.002254  0.000391  0.000375  0.000275  0.0006  0.000275    120  174.2  0.000815  0.0 -0.000587  1148.9
+cnt now is 8
+              x         y         z      D1A     D2A      D1B       D2B  angle    Qtot     Dtot         U        P       C
+1616499  0.0139  0.001941  0.000154  0.00045  0.0003  0.00045  0.000225    120  128.46  0.00074  0.001763  0.23649  613.18
+cnt now is 9
+                x         y         z       D1A       D2A      D1B       D2B  angle   Qtot     Dtot    U         P       C
+1841532  0.023315 -0.001445 -0.000332  0.000375  0.000225  0.00045  0.000275     66  178.1  0.00068  0.0 -0.033304  1166.4
+cnt now is 10
+                x         y        z      D1A       D2A       D1B       D2B  angle    Qtot      Dtot    U         P       C
+2046380  0.017495  0.002069  0.00034  0.00045  0.000275  0.000375  0.000225    102  185.48  0.000695  0.0 -0.017303  1149.1
+
+
+the length of the result dict is:10
+the result dict is:
+{'1': 12, '2': 38, '3': 138, '4': 320, '5': 369, '6': 482, '7': 613, '8': 639, '9': 704, '10': 729}
+the length of the result list is:10
+the result list is:
+[12, 38, 138, 320, 369, 482, 613, 639, 704, 729]
+
+
+end time is: 2022-10-15 02:01:15

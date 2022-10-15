@@ -42,8 +42,8 @@ if __name__ == '__main__':
     
 
     df_source_Qtot_csv = pd.read_csv(source_Qtot_csv_path, \
-                                     #header = None,\
-                                     #names=['x','y','z','D1A','D2A','D1B','D2B','angle','Qtot','Dtot','U','P','C'],\
+                                     header = None,\
+                                     names=['x','y','z','D1A','D2A','D1B','D2B','angle','Qtot','Dtot','U','P','C'],\
                                      encoding="utf8")
     print("the lenth of df_raw_info is %d"%len(df_raw_info))
     print("the lenth of df_source_Qtot_csv is %d"%len(df_source_Qtot_csv))
@@ -70,7 +70,7 @@ if __name__ == '__main__':
             print("cnt now is %d"%cnt)
             with open(print_log_file_path, "a") as log_file:
                 print("cnt now is %d"%cnt, file=log_file)
-                print(df_source_Qtot_csv[i], file=log_file)
+                print(df_source_Qtot_csv[i:i+1], file=log_file)
                 log_file.close()
         else:
             continue
