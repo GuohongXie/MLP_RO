@@ -11,5 +11,5 @@ source /public/software/profile.d/python3.sh
 conda activate py36
 
 # working
-cd /public/home/hengyi/guohong/MLP_RO_2022_10_08/code/model_training/mlp_training_all/mlp_p/
+cd /public/home/hengyi/guohong/MLP_RO_2022_10_15/code/model_training/mlp_training_all/mlp_p/
 python3 ./all_p_s_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_.py
