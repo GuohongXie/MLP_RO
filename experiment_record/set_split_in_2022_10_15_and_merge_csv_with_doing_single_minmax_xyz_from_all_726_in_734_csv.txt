@@ -13,3 +13,8 @@ finished merging test_data_csv_10
 
  at time :2022-10-15 16:26:22
 finished merging valid_data_csv_66
+
+ at time :2022-10-15 16:59:02
+finished merging train_data_csv_650
+end time is:2022-10-15 16:59:02
+you are all set
