@@ -8,10 +8,8 @@ from sklearn import preprocessing
 
 
 def merge_csv(raw_csv_folder_1, save_path_1, csv_list_1):  # 以 _1 结尾标记形参
-    file_list = os.listdir(raw_csv_folder_1)
-    file_list.sort(key= lambda x:int(x[:-4]))
     #读取第一个CSV文件并添加表头  
-    df = pd.read_csv(raw_csv_folder_1 + file_list[csv_list_1[0]-1],\
+    df = pd.read_csv(raw_csv_folder_1 + str(csv_list_1[0]) + '.csv',\
                      header = None,\
                      names=['x','y','z','D1A','D2A','D1B','D2B','angle','Qtot','Dtot','U','P','C'],\
                      encoding="utf8")  #编码默认UTF-8，若乱码自行更改
@@ -33,7 +31,7 @@ def merge_csv(raw_csv_folder_1, save_path_1, csv_list_1):  # 以 _1 结尾标记
 
     #循环遍历列表中各个CSV文件名，并追加到合并后的文件  
     for i in range(1,len(csv_list_1)):  
-        df = pd.read_csv(raw_csv_folder_1 +'/'+ file_list[csv_list_1[i]-1],\
+        df = pd.read_csv(raw_csv_folder_1 + str(csv_list_1[i]) + '.csv',\
                          header = None,\
                          names=['x','y','z','D1A','D2A','D1B','D2B','angle','Qtot','Dtot','U','P','C'],\
                          encoding="utf8") 
