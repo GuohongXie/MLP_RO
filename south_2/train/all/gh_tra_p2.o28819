@@ -1,0 +1,2 @@
+/opt/gridview//pbs/dispatcher/mom_priv/jobs/28819.mgr.SC: line 14: cd: /public/home/hengyi/guohong/MLP_RO_2022_10_08/code/model_training/mlp_training_all/mlp_p/: No such file or directory
+python3: can't open file './all_p_s_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_.py': [Errno 2] No such file or directory

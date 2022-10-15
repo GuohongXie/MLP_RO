@@ -1,0 +1,3 @@
+start time is: 2022-10-15 18:13:54
+the lenth of train_dataset is 148278770
+the lenth of valid_dataset is 15092361
