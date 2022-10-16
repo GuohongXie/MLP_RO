@@ -6,3 +6,6 @@ R2_valid: 0.804120268, valid_loss_mse: 0.002363068, valid_loss_rmse: 0.048611399
 start time is: 2022-10-16 17:34:44
 the lenth of train_dataset is 148278770
 the lenth of valid_dataset is 15092361
+start time is: 2022-10-16 17:56:51
+the lenth of train_dataset is 148278770
+the lenth of valid_dataset is 15092361
