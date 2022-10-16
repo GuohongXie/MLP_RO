@@ -1,9 +1,0 @@
-start_time is: 2022-10-16 14:23:52
-
-
-begin to process 0th csv
-start_time is: 2022-10-16 14:26:16
-
-
-begin to process 0th csv
-begin to process 1th csv
