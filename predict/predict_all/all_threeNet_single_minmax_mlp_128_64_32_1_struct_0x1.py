@@ -36,9 +36,9 @@ this_file_name = this_file_name[:-3]
 
 #设置网络参数路径
 # model_state_dict_path_u_p_c = r"../../results/model_parameters/in/in_u_p_c_4layers_128_64_32_1_Relu_BZ64_LR1e-4_WD1e-7_StepLRSchedule_10_5e-1_noBN_noResnet_noLastRelu_epoch12.pth"
-model_state_dict_path_u = r"../../results/model_parameters/all/all_u_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch10.pth"
-model_state_dict_path_p = r"../../results/model_parameters/all/all_p_4layers_128_64_32_1_Relu_BZ32_LR1e-5_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch1.pth"
-model_state_dict_path_c = r"../../results/model_parameters/all/all_c_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch2.pth"
+model_state_dict_path_u = r"../../results/model_parameters/all/all_u_s_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch0.pth"
+model_state_dict_path_p = r"../../results/model_parameters/all/all_p_s_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch3.pth"
+model_state_dict_path_c = r"../../results/model_parameters/all/all_c_s_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch0.pth"
 csv_raw_folder = r"../../../data/test_data/"
 csv_pred_folder = r"../../../data/predict_data/all/" + this_file_name + "/"
 print_log_path = r"../../results/predict_processing_log/all/" + this_file_name + ".txt"
