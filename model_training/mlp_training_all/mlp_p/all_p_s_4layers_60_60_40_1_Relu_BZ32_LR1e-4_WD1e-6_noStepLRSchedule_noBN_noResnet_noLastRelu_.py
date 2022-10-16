@@ -158,7 +158,7 @@ if __name__=="__main__":
     train_model(train_dataset, valid_dataset, model, \
                 epoch_num=20, batch__size = 32, learning_rate=1e-4, weight__decay=1e-6, \
                 using_gpu=True, which_gpu=0, \
-                resume_num=0, load_model=False, model_parameters_folder='../../../results/model_parameters/all/',
+                resume_num=5, load_model=True, model_parameters_folder='../../../results/model_parameters/all/',
                 print_folder='../../../results/training_process_output/all/', \
                 load_other_model=False, other_model_parameter_path = "../../../results/model_parameters/in/in_c_4layers_128_64_32_1_Relu_BZ64_LR1e-4_WD1e-7_StepLRSchedule_10_5e-1_noBN_noResnet_noLastRelu_epoch2.pth" )
 
