@@ -9,3 +9,5 @@ epoch: 2, loss = 0.000018417
 R2_valid: 0.994636654, valid_loss_mse: 0.000020355, valid_loss_rmse: 0.004511642
 epoch: 3, loss = 0.000014060
 R2_valid: 0.995420434, valid_loss_mse: 0.000017380, valid_loss_rmse: 0.004168970
+epoch: 4, loss = 0.000019979
+R2_valid: 0.994689015, valid_loss_mse: 0.000020156, valid_loss_rmse: 0.004489565
