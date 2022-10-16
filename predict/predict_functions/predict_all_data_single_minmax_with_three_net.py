@@ -16,14 +16,10 @@ from function_predict import function_predict
 
 
 
-def predict_all_data_single_minmax_with_three_net(source_csv_folder, target_csv_folder, model_u_used, model_p_used, model_c_used, using_gpu=True, which_gpu=0, log_path = ''):
+def predict_all_data_single_minmax_with_three_net(source_csv_folder, target_csv_folder, model_u_used, model_p_used, model_c_used, log_path = ''):
     # 此函数将xyz未经归一化的csv测试数据作为source_csv_folder
     # set device
-    if using_gpu:
-        cuda_name = "cuda:" + str(which_gpu)
-        device = torch.device(cuda_name)
-    else:
-        device = torch.device("cpu")
+    device = torch.device("cpu")
     model_u_used = model_u_used.to(device)
     model_p_used = model_p_used.to(device)
     model_c_used = model_c_used.to(device)
@@ -60,9 +56,9 @@ def predict_all_data_single_minmax_with_three_net(source_csv_folder, target_csv_
         
     
         for j in range(len(csv_temp)):
-            csv_temp["U"][j] = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_u_used, device_2=device)
-            csv_temp["P"][j] = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_p_used, device_2=device)
-            csv_temp["C"][j] = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_c_used, device_2=device)
+            csv_temp["U"][j] = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_u_used)
+            csv_temp["P"][j] = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_p_used)
+            csv_temp["C"][j] = function_predict(csv_temp.values[j,:-3].astype('float32'), model_used_2=model_c_used)
 
         csv_pred["U"]     = (csv_temp["U"])*0.6308
         csv_pred["P"]     = (csv_temp["P"])*2224.699 - 52.899

@@ -66,7 +66,7 @@ with open(print_log_path, "a") as log_file:
 print("start_time is: %s" %(start_time))
 
 #predict_layer_data_with_one_net(csv_raw_folder, csv_pred_folder, model_u_p_c, using_gpu=True, which_gpu=0, log_path = print_log_path)
-predict_all_data_single_minmax_with_three_net(csv_raw_folder, csv_pred_folder, model_u, model_p, model_c, using_gpu=True, which_gpu=0, log_path = print_log_path)
+predict_all_data_single_minmax_with_three_net(csv_raw_folder, csv_pred_folder, model_u, model_p, model_c, log_path = print_log_path)
 
 
 end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
