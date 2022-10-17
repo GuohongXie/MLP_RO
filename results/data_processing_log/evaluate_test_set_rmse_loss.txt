@@ -1,0 +1,21 @@
+
+
+start to evaluate_test_set_rmse_loss
+start time is: 2022-10-17 19:26:54
+
+
+start to calculate the u_test_set_rmse_loss: 
+the lenth of test_dataset is 2220143
+R2_test: 0.882895837, valid_loss_mse: 0.001441088, valid_loss_rmse: 0.037961666
+
+
+start to calculate the p_test_set_rmse_loss: 
+the lenth of test_dataset is 2220143
+R2_test: 0.991819676, valid_loss_mse: 0.000016873, valid_loss_rmse: 0.004107653
+
+
+start to calculate the c_test_set_rmse_loss: 
+the lenth of test_dataset is 2220143
+R2_test: 0.854631177, valid_loss_mse: 0.000678575, valid_loss_rmse: 0.026049482
+end time is: 2022-10-17 19:29:55
+you are all set
