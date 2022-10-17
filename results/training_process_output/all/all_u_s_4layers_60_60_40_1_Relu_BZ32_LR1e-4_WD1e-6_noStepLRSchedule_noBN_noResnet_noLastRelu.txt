@@ -9,3 +9,5 @@ the lenth of valid_dataset is 15092361
 start time is: 2022-10-16 17:56:51
 the lenth of train_dataset is 148278770
 the lenth of valid_dataset is 15092361
+epoch: 1, loss = 0.000977086
+R2_valid: 0.855454852, valid_loss_mse: 0.001743774, valid_loss_rmse: 0.041758519
