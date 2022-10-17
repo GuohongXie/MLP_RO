@@ -1,6 +1,0 @@
-start time is: 2022-10-15 18:07:15
-/public/home/hengyi/guohong/MLP_RO_2022_10_15/code/model_training/mlp_training_all/mlp_p
-Traceback (most recent call last):
-  File "./all_p_s_4layers_60_60_40_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_.py", line 150, in <module>
-    valid_dataset = P_valid_Dataset_single_minMaxScaler(valid_data_path)
-NameError: name 'P_valid_Dataset_single_minMaxScaler' is not defined
