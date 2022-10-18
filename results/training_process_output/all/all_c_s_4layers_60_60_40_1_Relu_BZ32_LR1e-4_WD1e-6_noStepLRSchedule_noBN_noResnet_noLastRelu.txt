@@ -8,3 +8,7 @@ the lenth of train_dataset is 148278770
 the lenth of valid_dataset is 15092361
 epoch: 1, loss = 0.002081264
 R2_valid: 0.810437435, valid_loss_mse: 0.001062482, valid_loss_rmse: 0.032595731
+epoch: 2, loss = 0.000484268
+R2_valid: 0.829567934, valid_loss_mse: 0.000955255, valid_loss_rmse: 0.030907208
+epoch: 3, loss = 0.001832256
+R2_valid: 0.827397529, valid_loss_mse: 0.000967420, valid_loss_rmse: 0.031103384
