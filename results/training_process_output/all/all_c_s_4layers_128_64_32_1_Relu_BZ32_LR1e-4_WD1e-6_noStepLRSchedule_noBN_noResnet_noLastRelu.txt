@@ -16,3 +16,15 @@ epoch: 4, loss = 0.000185755
 R2_valid: 0.855109396, valid_loss_mse: 0.000812098, valid_loss_rmse: 0.028497336
 epoch: 5, loss = 0.000224079
 R2_valid: 0.850887673, valid_loss_mse: 0.000835761, valid_loss_rmse: 0.028909527
+epoch: 6, loss = 0.001468367
+R2_valid: 0.862702388, valid_loss_mse: 0.000769540, valid_loss_rmse: 0.027740588
+epoch: 7, loss = 0.000327975
+R2_valid: 0.863936647, valid_loss_mse: 0.000762622, valid_loss_rmse: 0.027615603
+epoch: 8, loss = 0.000310281
+R2_valid: 0.870152997, valid_loss_mse: 0.000727780, valid_loss_rmse: 0.026977399
+epoch: 9, loss = 0.000484003
+R2_valid: 0.869847448, valid_loss_mse: 0.000729492, valid_loss_rmse: 0.027009116
+epoch: 10, loss = 0.000604426
+R2_valid: 0.870378142, valid_loss_mse: 0.000726519, valid_loss_rmse: 0.026954014
+epoch: 11, loss = 0.001398715
+R2_valid: 0.872674353, valid_loss_mse: 0.000713647, valid_loss_rmse: 0.026714180
