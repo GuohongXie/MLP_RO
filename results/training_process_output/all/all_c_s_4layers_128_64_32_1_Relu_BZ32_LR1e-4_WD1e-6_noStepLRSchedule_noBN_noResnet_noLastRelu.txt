@@ -28,3 +28,8 @@ epoch: 10, loss = 0.000604426
 R2_valid: 0.870378142, valid_loss_mse: 0.000726519, valid_loss_rmse: 0.026954014
 epoch: 11, loss = 0.001398715
 R2_valid: 0.872674353, valid_loss_mse: 0.000713647, valid_loss_rmse: 0.026714180
+start time is: 2022-10-18 17:27:58
+the lenth of train_dataset is 148278770
+the lenth of valid_dataset is 15092361
+epoch: 12, loss = 0.000445306
+R2_valid: 0.870840834, valid_loss_mse: 0.000723925, valid_loss_rmse: 0.026905861
