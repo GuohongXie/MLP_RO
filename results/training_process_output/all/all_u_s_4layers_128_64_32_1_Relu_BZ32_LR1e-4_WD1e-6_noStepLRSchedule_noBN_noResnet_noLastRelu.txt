@@ -37,3 +37,5 @@ epoch: 10, loss = 0.001553823
 R2_valid: 0.907084793, valid_loss_mse: 0.001120916, valid_loss_rmse: 0.033480089
 epoch: 11, loss = 0.001147553
 R2_valid: 0.917403716, valid_loss_mse: 0.000996431, valid_loss_rmse: 0.031566296
+epoch: 12, loss = 0.000793847
+R2_valid: 0.915792006, valid_loss_mse: 0.001015875, valid_loss_rmse: 0.031872794
