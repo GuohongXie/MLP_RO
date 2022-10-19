@@ -1,0 +1,10 @@
+	u_epoch	p_epoch	c_epoch
+struct0x1	0	3	0
+struct0x2	1	6	4
+struct0x3	3	8	8
+struct0x4	4	10	5
+struct0x5	6	7	10
+struct0x6	8	6	14
+struct0x7	9	6	15
+struct0x8			
+struct0x9			
