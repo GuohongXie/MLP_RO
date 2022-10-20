@@ -43,3 +43,9 @@ epoch: 16, loss = 0.000210298
 R2_valid: 0.878030337, valid_loss_mse: 0.000683629, valid_loss_rmse: 0.026146298
 epoch: 17, loss = 0.001983355
 R2_valid: 0.875357683, valid_loss_mse: 0.000698608, valid_loss_rmse: 0.026431201
+epoch: 18, loss = 0.000356518
+R2_valid: 0.873689384, valid_loss_mse: 0.000707959, valid_loss_rmse: 0.026607493
+epoch: 19, loss = 0.000229521
+R2_valid: 0.878858687, valid_loss_mse: 0.000678985, valid_loss_rmse: 0.026057340
+epoch: 20, loss = 0.000580856
+R2_valid: 0.880059441, valid_loss_mse: 0.000672256, valid_loss_rmse: 0.025927896
