@@ -84,9 +84,9 @@ if __name__=="__main__":
 
 
     #设置参数路径
-    model_state_dict_path_u = r"../results/model_parameters/all/all_u_s_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch1.pth"
+    model_state_dict_path_u = r"../results/model_parameters/all/all_u_s_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch8.pth"
     model_state_dict_path_p = r"../results/model_parameters/all/all_p_s_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch6.pth"
-    model_state_dict_path_c = r"../results/model_parameters/all/all_c_s_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch4.pth"
+    model_state_dict_path_c = r"../results/model_parameters/all/all_c_s_4layers_128_64_32_1_Relu_BZ32_LR1e-4_WD1e-6_noStepLRSchedule_noBN_noResnet_noLastRelu_epoch14.pth"
     test_data_path  = r'../../data/train_and_valid_merged_csv_single_minmax_xyz/test_data_csv/test_data_csv_10.csv' 
     print_log_path = r"../results/data_processing_log/evaluate_test_set_rmse_loss.txt"
 
