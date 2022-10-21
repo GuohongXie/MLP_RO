@@ -28,3 +28,15 @@ R2_valid: 0.992708295, valid_loss_mse: 0.000027673, valid_loss_rmse: 0.005260552
 start time is: 2022-10-20 09:11:27
 the lenth of train_dataset is 148278770
 the lenth of valid_dataset is 15092361
+epoch: 12, loss = 0.000016405
+R2_valid: 0.994702271, valid_loss_mse: 0.000020106, valid_loss_rmse: 0.004483957
+epoch: 13, loss = 0.000019259
+R2_valid: 0.995068776, valid_loss_mse: 0.000018715, valid_loss_rmse: 0.004326075
+epoch: 14, loss = 0.000014976
+R2_valid: 0.994916598, valid_loss_mse: 0.000019292, valid_loss_rmse: 0.004392318
+epoch: 15, loss = 0.000014778
+R2_valid: 0.995282076, valid_loss_mse: 0.000017905, valid_loss_rmse: 0.004231478
+epoch: 16, loss = 0.000019391
+R2_valid: 0.994486210, valid_loss_mse: 0.000020926, valid_loss_rmse: 0.004574482
+epoch: 17, loss = 0.000010285
+R2_valid: 0.995082960, valid_loss_mse: 0.000018661, valid_loss_rmse: 0.004319848
