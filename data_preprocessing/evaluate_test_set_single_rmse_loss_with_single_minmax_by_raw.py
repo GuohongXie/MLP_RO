@@ -42,7 +42,7 @@ def SMAPE(y_true, y_pred):
 
 
 # train the model
-def evaluate_single_model_file_RMSE_loss(raw_csv_path, predict_csv_path, print_log_file_path=''):
+def evaluate_single_model_file_RMSE_loss_minmax(raw_csv_path, predict_csv_path, print_log_file_path=''):
     csv_ordinal_list = re.findall(r"\d+", raw_csv_path)
     csv_ordinal_str = csv_ordinal_list[-1]
 
@@ -54,9 +54,16 @@ def evaluate_single_model_file_RMSE_loss(raw_csv_path, predict_csv_path, print_l
     U_raw_list = df_raw['U'].values.tolist()
     P_raw_list = df_raw['P'].values.tolist()
     C_raw_list = df_raw['C'].values.tolist()
-    U_raw_mean = sum(U_raw_list)/len(U_raw_list)
-    P_raw_mean = sum(P_raw_list)/len(P_raw_list)
-    C_raw_mean = sum(C_raw_list)/len(C_raw_list)
+    U_raw_list_minmax = []
+    P_raw_list_minmax = []
+    C_raw_list_minmax = []
+    U_max = max(U_raw_list)
+    U_min = min(U_raw_list)
+    P_max = max(P_raw_list)
+    P_min = min(P_raw_list)
+    C_max = max(C_raw_list)
+    C_min = min(C_raw_list)
+
  
 
     df_predict = pd.read_csv(predict_csv_path,\
@@ -67,6 +74,18 @@ def evaluate_single_model_file_RMSE_loss(raw_csv_path, predict_csv_path, print_l
     U_predict_list = df_predict['U'].values.tolist()
     P_predict_list = df_predict['P'].values.tolist()
     C_predict_list = df_predict['C'].values.tolist()
+    U_predict_list_minmax = []
+    P_predict_list_minmax = []
+    C_predict_list_minmax = []
+
+    for i in range(len(U_raw_list)):
+        U_raw_list_minmax.append((U_raw_list[i]-U_min)/(U_max-U_min))
+        U_predict_list_minmax.append((U_predict_list[i]-U_min)/(U_max-U_min))
+        P_raw_list_minmax.append((P_raw_list[i]-P_min)/(P_max-P_min))
+        P_predict_list_minmax.append((P_predict_list[i]-P_min)/(P_max-P_min))
+        C_raw_list_minmax.append((C_raw_list[i]-C_min)/(C_max-C_min))
+        C_predict_list_minmax.append((C_predict_list[i]-C_min)/(C_max-C_min))   
+
 
 
     with open(print_log_file_path, "a") as log_file:
@@ -80,21 +99,21 @@ def evaluate_single_model_file_RMSE_loss(raw_csv_path, predict_csv_path, print_l
     U_R2 = r2_score(U_raw_list, U_predict_list)
     P_R2 = r2_score(P_raw_list, P_predict_list)
     C_R2 = r2_score(C_raw_list, C_predict_list)
-    U_MSE = mean_squared_error(U_raw_list, U_predict_list)
-    P_MSE = mean_squared_error(P_raw_list, P_predict_list)
-    C_MSE = mean_squared_error(C_raw_list, C_predict_list)
-    U_MAE = mean_absolute_error(U_raw_list, U_predict_list)
-    P_MAE = mean_absolute_error(P_raw_list, P_predict_list)
-    C_MAE = mean_absolute_error(C_raw_list, C_predict_list)
-    U_SMAPE = SMAPE(U_raw_list, U_predict_list)
-    P_SMAPE = SMAPE(P_raw_list, P_predict_list)
-    C_SMAPE = SMAPE(C_raw_list, C_predict_list)
+    U_MSE = mean_squared_error(U_raw_list_minmax, U_predict_list_minmax)
+    P_MSE = mean_squared_error(P_raw_list_minmax, P_predict_list_minmax)
+    C_MSE = mean_squared_error(C_raw_list_minmax, C_predict_list_minmax)
+    U_MAE = mean_absolute_error(U_raw_list_minmax, U_predict_list_minmax)
+    P_MAE = mean_absolute_error(P_raw_list_minmax, P_predict_list_minmax)
+    C_MAE = mean_absolute_error(C_raw_list_minmax, C_predict_list_minmax)
+    U_SMAPE = SMAPE(U_raw_list_minmax, U_predict_list_minmax)
+    P_SMAPE = SMAPE(P_raw_list_minmax, P_predict_list_minmax)
+    C_SMAPE = SMAPE(C_raw_list_minmax, C_predict_list_minmax)
 
     with open(print_log_file_path, "a") as log_file:
         # evaluate the model
-        print("U_R2_loss: %.9f,  U_MSE_loss: %.9f,  U_RMSE_loss: %.9f,  U_RRMSE_loss: %.9f,  U_MAE_loss:%.9f,  U_RMAE_loss:%.9f,  U_SMAPE_loss:%.9f" %(U_R2, U_MSE, np.sqrt(U_MSE), (np.sqrt(U_MSE))/U_raw_mean, U_MAE, U_MAE/U_raw_mean, U_SMAPE), file=log_file)
-        print("P_R2_loss: %.9f,  P_MSE_loss: %.9f,  P_RMSE_loss: %.9f,  P_RRMSE_loss: %.9f,  P_MAE_loss:%.9f,  P_RMAE_loss:%.9f,  P_SMAPE_loss:%.9f" %(P_R2, P_MSE, np.sqrt(P_MSE), (np.sqrt(P_MSE))/P_raw_mean, P_MAE, P_MAE/P_raw_mean, P_SMAPE), file=log_file)
-        print("C_R2_loss: %.9f,  C_MSE_loss: %.9f,  C_RMSE_loss: %.9f,  C_RRMSE_loss: %.9f,  C_MAE_loss:%.9f,  C_RMAE_loss:%.9f,  C_SMAPE_loss:%.9f" %(C_R2, C_MSE, np.sqrt(C_MSE), (np.sqrt(C_MSE))/C_raw_mean, C_MAE, C_MAE/C_raw_mean, C_SMAPE), file=log_file)
+        print("U_R2_loss: %.9f,  U_MSE_loss_minmax: %.9f,  U_RMSE_loss_minmax: %.9f,  U_MAE_loss_minmax:%.9f,  U_SMAPE_loss_minmax:%.9f" %(U_R2, U_MSE, np.sqrt(U_MSE), U_MAE, U_SMAPE), file=log_file)
+        print("P_R2_loss: %.9f,  P_MSE_loss_minmax: %.9f,  P_RMSE_loss_minmax: %.9f,  P_MAE_loss_minmax:%.9f,  P_SMAPE_loss_minmax:%.9f" %(P_R2, P_MSE, np.sqrt(P_MSE), P_MAE, P_SMAPE), file=log_file)
+        print("C_R2_loss: %.9f,  C_MSE_loss_minmax: %.9f,  C_RMSE_loss_minmax: %.9f,  C_MAE_loss_minmax:%.9f,  C_SMAPE_loss_minmax:%.9f" %(C_R2, C_MSE, np.sqrt(C_MSE), C_MAE, C_SMAPE), file=log_file)
         log_file.close()
     
     return None
@@ -106,7 +125,7 @@ if __name__=="__main__":
 
     test_data_folder  = r'../../data/test_data/' 
     predict_data_folder = r'../../data/predict_data/all/all_threeNet_single_minmax_mlp_128_64_32_1_struct_0x6/'
-    print_log_path = r"../results/data_processing_log/evaluate_test_set_single_RMSE_loss_0x6.txt"
+    print_log_path = r"../results/data_processing_log/evaluate_test_set_single_rmse_loss_minmax_with_single_minmax_by_raw_0x6.txt"
 
 
     # record time
@@ -130,7 +149,7 @@ if __name__=="__main__":
             break
         raw_csv_file_path = test_data_folder + raw_csv_list[i]
         predict_csv_file_path = predict_data_folder + predict_csv_list[i]
-        evaluate_single_model_file_RMSE_loss(raw_csv_file_path, predict_csv_file_path, print_log_file_path=print_log_path)
+        evaluate_single_model_file_RMSE_loss_minmax(raw_csv_file_path, predict_csv_file_path, print_log_file_path=print_log_path)
 
     
 

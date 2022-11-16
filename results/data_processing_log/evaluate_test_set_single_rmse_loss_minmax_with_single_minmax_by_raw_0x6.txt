@@ -1,0 +1,83 @@
+start time is: 2022-10-20 15:02:11
+
+
+start to processing the 12_csv: 
+the lenth of 12_csv_df_raw is 202717
+the lenth of 12_csv_df_predict is 202717
+U_R2_loss: 0.895618588,  U_MSE_loss_minmax: 0.006021889,  U_RMSE_loss_minmax: 0.077600831,  U_MAE_loss_minmax:0.044935731,  U_SMAPE_loss_minmax:0.837198668
+P_R2_loss: 0.989710684,  P_MSE_loss_minmax: 0.000606043,  P_RMSE_loss_minmax: 0.024617942,  P_MAE_loss_minmax:0.019107736,  P_SMAPE_loss_minmax:0.064303027
+C_R2_loss: 0.868146139,  C_MSE_loss_minmax: 0.003755331,  C_RMSE_loss_minmax: 0.061280755,  C_MAE_loss_minmax:0.033675685,  C_SMAPE_loss_minmax:0.404365016
+
+
+start to processing the 38_csv: 
+the lenth of 38_csv_df_raw is 275897
+the lenth of 38_csv_df_predict is 275897
+U_R2_loss: 0.836225602,  U_MSE_loss_minmax: 0.007619235,  U_RMSE_loss_minmax: 0.087288231,  U_MAE_loss_minmax:0.058912425,  U_SMAPE_loss_minmax:1.027959311
+P_R2_loss: 0.995348115,  P_MSE_loss_minmax: 0.000292338,  P_RMSE_loss_minmax: 0.017097898,  P_MAE_loss_minmax:0.013665859,  P_SMAPE_loss_minmax:0.081511294
+C_R2_loss: 0.897294250,  C_MSE_loss_minmax: 0.003599490,  C_RMSE_loss_minmax: 0.059995747,  C_MAE_loss_minmax:0.030626557,  C_SMAPE_loss_minmax:0.389831899
+
+
+start to processing the 138_csv: 
+the lenth of 138_csv_df_raw is 227313
+the lenth of 138_csv_df_predict is 227313
+U_R2_loss: 0.936347500,  U_MSE_loss_minmax: 0.003078890,  U_RMSE_loss_minmax: 0.055487743,  U_MAE_loss_minmax:0.032026614,  U_SMAPE_loss_minmax:0.845408042
+P_R2_loss: 0.996078202,  P_MSE_loss_minmax: 0.000215346,  P_RMSE_loss_minmax: 0.014674684,  P_MAE_loss_minmax:0.011661197,  P_SMAPE_loss_minmax:0.057249372
+C_R2_loss: 0.857541030,  C_MSE_loss_minmax: 0.003044138,  C_RMSE_loss_minmax: 0.055173708,  C_MAE_loss_minmax:0.031999703,  C_SMAPE_loss_minmax:0.334395319
+
+
+start to processing the 320_csv: 
+the lenth of 320_csv_df_raw is 223955
+the lenth of 320_csv_df_predict is 223955
+U_R2_loss: 0.911732194,  U_MSE_loss_minmax: 0.004451417,  U_RMSE_loss_minmax: 0.066718940,  U_MAE_loss_minmax:0.042553260,  U_SMAPE_loss_minmax:0.760675441
+P_R2_loss: 0.990871551,  P_MSE_loss_minmax: 0.000256503,  P_RMSE_loss_minmax: 0.016015719,  P_MAE_loss_minmax:0.012124164,  P_SMAPE_loss_minmax:0.069113624
+C_R2_loss: 0.890790500,  C_MSE_loss_minmax: 0.002277822,  C_RMSE_loss_minmax: 0.047726532,  C_MAE_loss_minmax:0.028737187,  C_SMAPE_loss_minmax:0.336175665
+
+
+start to processing the 369_csv: 
+the lenth of 369_csv_df_raw is 209385
+the lenth of 369_csv_df_predict is 209385
+U_R2_loss: 0.926932163,  U_MSE_loss_minmax: 0.003652276,  U_RMSE_loss_minmax: 0.060434066,  U_MAE_loss_minmax:0.037981836,  U_SMAPE_loss_minmax:0.609522837
+P_R2_loss: 0.991373909,  P_MSE_loss_minmax: 0.000245645,  P_RMSE_loss_minmax: 0.015673073,  P_MAE_loss_minmax:0.011406831,  P_SMAPE_loss_minmax:0.067188206
+C_R2_loss: 0.874454437,  C_MSE_loss_minmax: 0.001707595,  C_RMSE_loss_minmax: 0.041323057,  C_MAE_loss_minmax:0.024309220,  C_SMAPE_loss_minmax:0.397385250
+
+
+start to processing the 453_csv: 
+the lenth of 453_csv_df_raw is 234316
+the lenth of 453_csv_df_predict is 234316
+U_R2_loss: 0.905636643,  U_MSE_loss_minmax: 0.004573522,  U_RMSE_loss_minmax: 0.067627820,  U_MAE_loss_minmax:0.039847866,  U_SMAPE_loss_minmax:0.708183015
+P_R2_loss: 0.986974814,  P_MSE_loss_minmax: 0.000341219,  P_RMSE_loss_minmax: 0.018472116,  P_MAE_loss_minmax:0.014371516,  P_SMAPE_loss_minmax:0.086097541
+C_R2_loss: 0.869980689,  C_MSE_loss_minmax: 0.003474255,  C_RMSE_loss_minmax: 0.058942808,  C_MAE_loss_minmax:0.033987566,  C_SMAPE_loss_minmax:0.414387336
+
+
+start to processing the 613_csv: 
+the lenth of 613_csv_df_raw is 197946
+the lenth of 613_csv_df_predict is 197946
+U_R2_loss: 0.909299581,  U_MSE_loss_minmax: 0.003891389,  U_RMSE_loss_minmax: 0.062381001,  U_MAE_loss_minmax:0.038731616,  U_SMAPE_loss_minmax:0.723168635
+P_R2_loss: 0.980783148,  P_MSE_loss_minmax: 0.000260881,  P_RMSE_loss_minmax: 0.016151814,  P_MAE_loss_minmax:0.012671060,  P_SMAPE_loss_minmax:0.094421807
+C_R2_loss: 0.876615392,  C_MSE_loss_minmax: 0.002352311,  C_RMSE_loss_minmax: 0.048500631,  C_MAE_loss_minmax:0.028959617,  C_SMAPE_loss_minmax:0.434518757
+
+
+start to processing the 639_csv: 
+the lenth of 639_csv_df_raw is 225033
+the lenth of 639_csv_df_predict is 225033
+U_R2_loss: 0.910535978,  U_MSE_loss_minmax: 0.004001250,  U_RMSE_loss_minmax: 0.063255436,  U_MAE_loss_minmax:0.040476896,  U_SMAPE_loss_minmax:0.745103360
+P_R2_loss: 0.980864487,  P_MSE_loss_minmax: 0.000200046,  P_RMSE_loss_minmax: 0.014143778,  P_MAE_loss_minmax:0.010154571,  P_SMAPE_loss_minmax:0.087238541
+C_R2_loss: 0.882370601,  C_MSE_loss_minmax: 0.000728386,  C_RMSE_loss_minmax: 0.026988623,  C_MAE_loss_minmax:0.015647415,  C_SMAPE_loss_minmax:0.409439941
+
+
+start to processing the 704_csv: 
+the lenth of 704_csv_df_raw is 204848
+the lenth of 704_csv_df_predict is 204848
+U_R2_loss: 0.945964727,  U_MSE_loss_minmax: 0.002644820,  U_RMSE_loss_minmax: 0.051427809,  U_MAE_loss_minmax:0.030865905,  U_SMAPE_loss_minmax:0.628973089
+P_R2_loss: 0.994465722,  P_MSE_loss_minmax: 0.000259659,  P_RMSE_loss_minmax: 0.016113953,  P_MAE_loss_minmax:0.013093617,  P_SMAPE_loss_minmax:0.059920167
+C_R2_loss: 0.856665834,  C_MSE_loss_minmax: 0.002170813,  C_RMSE_loss_minmax: 0.046591987,  C_MAE_loss_minmax:0.027264135,  C_SMAPE_loss_minmax:0.342690887
+
+
+start to processing the 729_csv: 
+the lenth of 729_csv_df_raw is 218733
+the lenth of 729_csv_df_predict is 218733
+U_R2_loss: 0.921685219,  U_MSE_loss_minmax: 0.003800293,  U_RMSE_loss_minmax: 0.061646514,  U_MAE_loss_minmax:0.038442157,  U_SMAPE_loss_minmax:0.622163657
+P_R2_loss: 0.988315512,  P_MSE_loss_minmax: 0.000299186,  P_RMSE_loss_minmax: 0.017297007,  P_MAE_loss_minmax:0.013554759,  P_SMAPE_loss_minmax:0.079260358
+C_R2_loss: 0.853607696,  C_MSE_loss_minmax: 0.001406854,  C_RMSE_loss_minmax: 0.037508046,  C_MAE_loss_minmax:0.022212329,  C_SMAPE_loss_minmax:0.396464231
+end time is: 2022-10-20 15:02:24
+you are all set

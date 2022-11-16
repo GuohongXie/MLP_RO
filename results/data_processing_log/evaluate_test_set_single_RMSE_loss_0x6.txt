@@ -1,0 +1,83 @@
+start time is: 2022-10-20 14:34:14
+
+
+start to processing the 12_csv: 
+the lenth of 12_csv_df_raw is 202717
+the lenth of 12_csv_df_predict is 202717
+U_R2_loss: 0.895618588,  U_MSE_loss: 0.000738145,  U_RMSE_loss: 0.027168827,  U_RRMSE_loss: 0.489695293,  U_MAE_loss:0.015732449,  U_RMAE_loss:0.283564175,  U_SMAPE_loss:0.837198668
+P_R2_loss: 0.989710684,  P_MSE_loss: 93.370435049,  P_RMSE_loss: 9.662837836,  P_RRMSE_loss: 0.057095250,  P_MAE_loss:7.500015765,  P_RMAE_loss:0.044315685,  P_SMAPE_loss:0.102880322
+C_R2_loss: 0.868146139,  C_MSE_loss: 1360.223621739,  C_RMSE_loss: 36.881209602,  C_RRMSE_loss: 0.054939604,  C_MAE_loss:20.267374123,  C_RMAE_loss:0.030191025,  C_SMAPE_loss:0.027502771
+
+
+start to processing the 38_csv: 
+the lenth of 38_csv_df_raw is 275897
+the lenth of 38_csv_df_predict is 275897
+U_R2_loss: 0.836225602,  U_MSE_loss: 0.000145038,  U_RMSE_loss: 0.012043157,  U_RRMSE_loss: 0.620016583,  U_MAE_loss:0.008128147,  U_RMAE_loss:0.418460545,  U_SMAPE_loss:1.027959311
+P_R2_loss: 0.995348115,  P_MSE_loss: 4.596462439,  P_RMSE_loss: 2.143936202,  P_RRMSE_loss: 0.039178510,  P_MAE_loss:1.713586659,  P_RMAE_loss:0.031314258,  P_SMAPE_loss:0.092611548
+C_R2_loss: 0.897294250,  C_MSE_loss: 1216.302438782,  C_RMSE_loss: 34.875527792,  C_RRMSE_loss: 0.051687789,  C_MAE_loss:17.803217614,  C_RMAE_loss:0.026385521,  C_SMAPE_loss:0.023875058
+
+
+start to processing the 138_csv: 
+the lenth of 138_csv_df_raw is 227313
+the lenth of 138_csv_df_predict is 227313
+U_R2_loss: 0.936347500,  U_MSE_loss: 0.000169266,  U_RMSE_loss: 0.013010211,  U_RRMSE_loss: 0.406096124,  U_MAE_loss:0.007509280,  U_RMAE_loss:0.234392010,  U_SMAPE_loss:0.845408042
+P_R2_loss: 0.996078202,  P_MSE_loss: 16.611532989,  P_RMSE_loss: 4.075724842,  P_RRMSE_loss: 0.035814500,  P_MAE_loss:3.238763469,  P_RMAE_loss:0.028459894,  P_SMAPE_loss:0.080809386
+C_R2_loss: 0.857541030,  C_MSE_loss: 1059.161631714,  C_RMSE_loss: 32.544763507,  C_RRMSE_loss: 0.047982148,  C_MAE_loss:18.875344789,  C_RMAE_loss:0.027828735,  C_SMAPE_loss:0.025892681
+
+
+start to processing the 320_csv: 
+the lenth of 320_csv_df_raw is 223955
+the lenth of 320_csv_df_predict is 223955
+U_R2_loss: 0.911732194,  U_MSE_loss: 0.000120955,  U_RMSE_loss: 0.010997950,  U_RRMSE_loss: 0.413138929,  U_MAE_loss:0.007014479,  U_RMAE_loss:0.263499512,  U_SMAPE_loss:0.760675441
+P_R2_loss: 0.990871551,  P_MSE_loss: 6.623711200,  P_RMSE_loss: 2.573657164,  P_RRMSE_loss: 0.055082352,  P_MAE_loss:1.948301069,  P_RMAE_loss:0.041698252,  P_SMAPE_loss:0.101684082
+C_R2_loss: 0.890790500,  C_MSE_loss: 850.330903775,  C_RMSE_loss: 29.160433875,  C_RRMSE_loss: 0.043026787,  C_MAE_loss:17.558134134,  C_RMAE_loss:0.025907368,  C_SMAPE_loss:0.024133674
+
+
+start to processing the 369_csv: 
+the lenth of 369_csv_df_raw is 209385
+the lenth of 369_csv_df_predict is 209385
+U_R2_loss: 0.926932163,  U_MSE_loss: 0.000468770,  U_RMSE_loss: 0.021651108,  U_RRMSE_loss: 0.325680230,  U_MAE_loss:0.013607373,  U_RMAE_loss:0.204684775,  U_SMAPE_loss:0.609522837
+P_R2_loss: 0.991373909,  P_MSE_loss: 92.565795926,  P_RMSE_loss: 9.621111990,  P_RRMSE_loss: 0.054184823,  P_MAE_loss:7.002225732,  P_RMAE_loss:0.039435604,  P_SMAPE_loss:0.106607502
+C_R2_loss: 0.874454437,  C_MSE_loss: 597.985661746,  C_RMSE_loss: 24.453745352,  C_RRMSE_loss: 0.037471758,  C_MAE_loss:14.385467058,  C_RMAE_loss:0.022043606,  C_SMAPE_loss:0.020661745
+
+
+start to processing the 453_csv: 
+the lenth of 453_csv_df_raw is 234316
+the lenth of 453_csv_df_predict is 234316
+U_R2_loss: 0.905636643,  U_MSE_loss: 0.000817253,  U_RMSE_loss: 0.028587632,  U_RRMSE_loss: 0.393988310,  U_MAE_loss:0.016844490,  U_RMAE_loss:0.232146968,  U_SMAPE_loss:0.708183015
+P_R2_loss: 0.986974814,  P_MSE_loss: 181.950743359,  P_RMSE_loss: 13.488911867,  P_RRMSE_loss: 0.066816720,  P_MAE_loss:10.494526442,  P_RMAE_loss:0.051984166,  P_SMAPE_loss:0.155990671
+C_R2_loss: 0.869980689,  C_MSE_loss: 1290.524676495,  C_RMSE_loss: 35.923873350,  C_RRMSE_loss: 0.053394187,  C_MAE_loss:20.714401705,  C_RMAE_loss:0.030788123,  C_SMAPE_loss:0.028092802
+
+
+start to processing the 613_csv: 
+the lenth of 613_csv_df_raw is 197946
+the lenth of 613_csv_df_predict is 197946
+U_R2_loss: 0.909299581,  U_MSE_loss: 0.000476205,  U_RMSE_loss: 0.021822122,  U_RRMSE_loss: 0.395606565,  U_MAE_loss:0.013549094,  U_RMAE_loss:0.245627375,  U_SMAPE_loss:0.723168635
+P_R2_loss: 0.980783148,  P_MSE_loss: 164.421194611,  P_RMSE_loss: 12.822682816,  P_RRMSE_loss: 0.081613431,  P_MAE_loss:10.059364154,  P_RMAE_loss:0.064025543,  P_SMAPE_loss:0.171706378
+C_R2_loss: 0.876615392,  C_MSE_loss: 834.457373310,  C_RMSE_loss: 28.886975842,  C_RRMSE_loss: 0.043674336,  C_MAE_loss:17.248348085,  C_RMAE_loss:0.026077848,  C_SMAPE_loss:0.024429132
+
+
+start to processing the 639_csv: 
+the lenth of 639_csv_df_raw is 225033
+the lenth of 639_csv_df_predict is 225033
+U_R2_loss: 0.910535978,  U_MSE_loss: 0.000332456,  U_RMSE_loss: 0.018233379,  U_RRMSE_loss: 0.398084534,  U_MAE_loss:0.011667465,  U_RMAE_loss:0.254732674,  U_SMAPE_loss:0.745103360
+P_R2_loss: 0.980864487,  P_MSE_loss: 96.043554506,  P_RMSE_loss: 9.800181351,  P_RRMSE_loss: 0.082246668,  P_MAE_loss:7.036072017,  P_RMAE_loss:0.059049262,  P_SMAPE_loss:0.173523635
+C_R2_loss: 0.882370601,  C_MSE_loss: 865.538057463,  C_RMSE_loss: 29.420028169,  C_RRMSE_loss: 0.044349346,  C_MAE_loss:17.057090649,  C_RMAE_loss:0.025712784,  C_SMAPE_loss:0.023947653
+
+
+start to processing the 704_csv: 
+the lenth of 704_csv_df_raw is 204848
+the lenth of 704_csv_df_predict is 204848
+U_R2_loss: 0.945964727,  U_MSE_loss: 0.000243540,  U_RMSE_loss: 0.015605769,  U_RRMSE_loss: 0.322189014,  U_MAE_loss:0.009366259,  U_RMAE_loss:0.193371170,  U_SMAPE_loss:0.628973089
+P_R2_loss: 0.994465722,  P_MSE_loss: 45.263544952,  P_RMSE_loss: 6.727818737,  P_RRMSE_loss: 0.042677168,  P_MAE_loss:5.466782690,  P_RMAE_loss:0.034677927,  P_SMAPE_loss:0.086727345
+C_R2_loss: 0.856665834,  C_MSE_loss: 782.795809271,  C_RMSE_loss: 27.978488331,  C_RRMSE_loss: 0.042018728,  C_MAE_loss:16.372113079,  C_RMAE_loss:0.024588011,  C_SMAPE_loss:0.022973470
+
+
+start to processing the 729_csv: 
+the lenth of 729_csv_df_raw is 218733
+the lenth of 729_csv_df_predict is 218733
+U_R2_loss: 0.921685219,  U_MSE_loss: 0.000511523,  U_RMSE_loss: 0.022616873,  U_RRMSE_loss: 0.349542279,  U_MAE_loss:0.014103658,  U_RMAE_loss:0.217971108,  U_SMAPE_loss:0.622163657
+P_R2_loss: 0.988315512,  P_MSE_loss: 157.715106738,  P_RMSE_loss: 12.558467531,  P_RRMSE_loss: 0.062886961,  P_MAE_loss:9.841413511,  P_RMAE_loss:0.049281219,  P_SMAPE_loss:0.125851355
+C_R2_loss: 0.853607696,  C_MSE_loss: 598.040721169,  C_RMSE_loss: 24.454871113,  C_RRMSE_loss: 0.037579195,  C_MAE_loss:14.482216309,  C_RMAE_loss:0.022254463,  C_SMAPE_loss:0.020946750
+end time is: 2022-10-20 14:34:25
+you are all set
